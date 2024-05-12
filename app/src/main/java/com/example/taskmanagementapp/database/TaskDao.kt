@@ -21,10 +21,10 @@ interface TaskDao {
      */
 
     @Update
-    suspend fun updateNote(note: Task)
+    suspend fun updateNote(task: Task)
 
     @Delete
-    suspend fun deleteNote(note: Task)
+    suspend fun deleteNote(task: Task)
 
     @Query("SELECT * FROM TASKS ORDER BY id DESC") //in the ascending order(recently created task will be at the top and the other Tasks will be at the bottom)
     fun getAllTasks(): LiveData<List<Task>>
