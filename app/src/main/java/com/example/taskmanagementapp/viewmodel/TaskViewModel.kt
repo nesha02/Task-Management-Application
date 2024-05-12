@@ -26,9 +26,9 @@ class TaskViewModel (app:Application,private val taskRepository: TaskRepository)
             taskRepository.updateNote(task) // this will launch in the background using coroutines
         }
 
-    fun getAllNotes() = taskRepository.getAllTasks()
+    fun getAllTasks() = taskRepository.getAllTasks()
 
-    fun searchNote(query: String?) =
+    fun searchTask(query: String?) =
         taskRepository.searchTask(query)
 
 
