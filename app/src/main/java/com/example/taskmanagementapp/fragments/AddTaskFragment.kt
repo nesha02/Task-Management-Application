@@ -48,7 +48,7 @@ class AddTaskFragment : Fragment(R.layout.fragment_add_task),MenuProvider {
     }
 
     private fun saveTask(view: View){
-        val noteTitle = binding.addNoteTitle.toString().trim()
+        val noteTitle = binding.addNoteTitle.text.toString().trim()
         val noteDesc = binding.addNoteDesc.text.toString().trim()
 
         if(noteTitle.isNotEmpty()){

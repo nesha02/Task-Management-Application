@@ -52,9 +52,9 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
             it.findNavController().navigate(R.id.action_homeFragment_to_addTaskFragment)
         }
     }
-    private fun updateUI(note: List<Task>?){
-        if(note != null){
-            if(note.isNotEmpty()){
+    private fun updateUI(task: List<Task>?){
+        if(task != null){
+            if(task.isNotEmpty()){
                 binding.emptyNotesImage.visibility = View.GONE
                 binding.homeRecyclerView.visibility = View.VISIBLE
             }else{
